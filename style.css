@@ -240,6 +240,34 @@ body {
     color: black;
     font-weight: bold;
 }
+.offline-banner {
+    position: fixed;
+    bottom: -60px;
+    left: 25%;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: bottom 0.4s ease, background 0.3s ease;
+    z-index: 9999;
+}
+
+.offline-banner.show {
+    bottom: 0;
+}
+
+/* Different colors */
+.offline {
+    background-color: #ec0707;
+    /* dark - offline */
+}
+
+.online {
+    background: #0f9d58;
+    /* green - online */
+}
 /* Responsive */
 @media(max-width:1100px) {
     .videos {

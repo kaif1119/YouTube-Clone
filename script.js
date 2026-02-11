@@ -243,6 +243,41 @@ chips.forEach((chip) => {
     renderVideos(filteredVideos);
   });
 });
+/* ================= OFFLINE / ONLINE DETECTION ================= */
+
+const offlineBanner = document.getElementById("offlineBanner");
+let bannerTimer;
+
+// Common function to show banner with message & color
+function showBanner(message, statusClass) {
+  offlineBanner.textContent = message;
+  offlineBanner.className = `offline-banner show ${statusClass}`;
+
+  clearTimeout(bannerTimer);
+
+  // Online message 3 sec baad hide ho jayega
+  if (statusClass === "online") {
+    bannerTimer = setTimeout(() => {
+      offlineBanner.classList.remove("show");
+    }, 3000);
+  }
+}
+
+// Page load check
+if (!navigator.onLine) {
+  showBanner("⚠️ You are offline. Check your internet connection.", "offline");
+}
+
+// Internet gone
+window.addEventListener("offline", () => {
+  showBanner("⚠️ You are offline. Check your internet connection.", "offline");
+});
+
+// Internet back
+window.addEventListener("online", () => {
+  showBanner("✅ Back online. You're connected again!", "online");
+});
+
 
 
 /* ===================== VIDEO RENDER FUNCTION ===================== */
