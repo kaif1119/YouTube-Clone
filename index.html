@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar at the top of the page -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <i class="fas fa-bars icon"></i>
+        <img
+          src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"
+          class="logo"
+        />
+        <!-- YouTube logo image -->
+        <span class="country">IN</span>
+      </div>
+      
+      <div class="nav-center">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search" />
+          <i class="fas fa-times clear .clear-search" id="clearBtn"></i>
+        </div>
+        <!-- Closes search box container -->
+        <button class="search-btn" id="searchBtn">
+          <!-- Search button next to input -->
+          <i class="fas fa-search"></i>
+        </button>
+        <!-- Closes search button -->
+
+        <!-- Microphone button container for voice search -->
+        <div class="mic" id="micBtn">
+          <i class="fas fa-microphone"></i>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <button class="create-btn">
+          <i class="fas fa-plus"></i> Create
+        </button>
+        <div class="bell">
+          <i class="fas fa-bell"></i>
+          <span class="badge">9+</span>
+        </div>
+        <div class="profile">T</div>
+      </div>
+    </nav>
+    <!-- Closes navbar -->
+
+    <section class="chips" id="chips">
+      <button class="chip active" data-category="All">All</button>
+      <button class="chip" data-category="JavaScript">JavaScript</button>
+      <button class="chip" data-category="Web Development">
+        Web Development
+      </button>
+      <button class="chip" data-category="React">React</button>
+      <button class="chip" data-category="HTML">HTML/CSS</button>
+      <button class="chip" data-category="Tailwind CSS">Tailwind CSS</button>
+      <button class="chip" data-category="Machine Learning">
+        Machine Learning
+      </button>
+    </section>
+
+    <!-- Main videos display area -->
+    <section class="videos" id="videos"></section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

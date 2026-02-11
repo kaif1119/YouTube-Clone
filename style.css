@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 18px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* LEFT */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    height: 22px;
+}
+
+.country {
+    font-size: 12px;
+    color: #606060;
+    margin-left: -12px;
+}
+
+.icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* CENTER */
+.nav-center {
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 30px 0 0 30px;
+    padding: 6px 12px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.clear {
+    color: #777;
+    cursor: pointer;
+}
+
+.search-btn {
+    border: 1px solid #ccc;
+    border-left: none;
+    padding: 8px 18px;
+    background: #f8f8f8;
+    cursor: pointer;
+    border-radius: 0 30px 30px 0;
+}
+
+.mic {
+    margin-left: 14px;
+    background: #f2f2f2;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* RIGHT */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.create-btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #f2f2f2;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.bell {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.profile {
+    width: 32px;
+    height: 32px;
+    background: purple;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .nav-center {
+        width: 55%;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-center {
+        display: none;
+    }
+}
+
+
+
+/* CHIPS BAR */
+.chips {
+    display: flex;
+    gap: 12px;
+    padding: 12px 20px;
+    overflow-x: auto;
+    border-bottom: 1px solid #e5e5e5;
+    background: #fff;
+}
+
+.chips::-webkit-scrollbar {
+    display: none;
+}
+
+.chip {
+    padding: 8px 14px;
+    border-radius: 18px;
+    border: 1px solid #ddd;
+    background: #f2f2f2;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.chip.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+ /* Grid   */
+.videos {
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+/* Card */
+.video-card {
+    cursor: pointer;
+}
+
+/* Thumbnail wrapper */
+.thumb-wrap {
+    position: relative;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 12px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Duration badge */
+.duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+/* Info */
+.video-info {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.channel-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.video-text h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.video-text p {
+    font-size: 13px;
+    color: #606060;
+}
+.highlight {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+}
+/* Responsive */
+@media(max-width:1100px) {
+    .videos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width:800px) {
+    .videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:500px) {
+    .videos {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
