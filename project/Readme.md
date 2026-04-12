@@ -3,27 +3,29 @@
 ```
 /project
 │
-├── 📄 index.html
-├── 🎨 style.css
+├── 📄 README.md
 │
 └── 📂 src/
     │
-    ├── 📂 data/
-    │   └── 📄 videos.js
-    │
-    ├── 📂 utils/
-    │   └── 📄 highlight.js
+    ├── 📂 app/
+    │   ├── 📄 index.html
+    │   ├── 📄 main.js
+    │   └── 🎨 style.css
     │
     ├── 📂 components/
     │   └── 📄 renderVideos.js
     │
-    ├── 📂 features/
-    │   ├── 📄 search.js
-    │   ├── 📄 chips.js
-    │   ├── 📄 voiceSearch.js
-    │   ├── 📄 themeToggle.js
-    │   ├── 📄 mobileSearch.js
-    │   └── 📄 offlineStatus.js
+    ├── 📂 data/
+    │   └── 📄 videos.js
     │
-    └── 📄 main.js
+    ├── 📂 features/
+    │   ├── 📄 chips.js
+    │   ├── 📄 mobileSearch.js
+    │   ├── 📄 offlineStatus.js
+    │   ├── 📄 search.js
+    │   ├── 📄 themeToggle.js
+    │   └── 📄 voiceSearch.js
+    │
+    └── 📂 utils/
+        └── 📄 highlight.js
 ```
