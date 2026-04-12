@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+
+    <div class="nav-left">
+      <i class="fas fa-bars icon"></i>
+      <!-- Ek hi logo — dark mode mein JS filter lagayega -->
+      <img
+        src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"
+        class="logo"
+        alt="YouTube"
+      />
+      <span class="country">IN</span>
+    </div>
+
+    <div class="nav-center">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search"/>
+        <i class="fas fa-times clear-btn" id="clearBtn"></i>
+      </div>
+      <button class="search-btn" id="searchBtn">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="mic">
+        <i class="fas fa-microphone"></i>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <i class="fas fa-search mobile-search-icon" id="mobileSearchOpen"></i>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" title="Dark Mode">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="create-btn"><i class="fas fa-plus"></i> Create</button>
+      <div class="bell">
+        <i class="fas fa-bell"></i>
+        <span class="badge">9+</span>
+      </div>
+      <div class="profile">T</div>
+    </div>
+
+  </nav>
+
+  <!-- ================= MOBILE SEARCH OVERLAY ================= -->
+  <div class="mobile-search-overlay" id="mobileSearchOverlay">
+
+    <div class="ms-top">
+      <i class="fas fa-arrow-left" id="mobileSearchClose"></i>
+      <div class="ms-input-wrap">
+        <input type="text" id="mobileSearchInput" placeholder="Search YouTube"/>
+        <i class="fas fa-times ms-clear" id="mobileSearchClear"></i>
+      </div>
+      <div class="ms-mic" id="msMic">
+        <i class="fas fa-microphone"></i>
+      </div>
+    </div>
+
+    <ul class="ms-suggestions" id="msSuggestions"></ul>
+
+  </div>
+
+  <!-- ================= CHIPS ================= -->
+  <div class="chips">
+    <div class="chip active" data-category="All">All</div>
+    <div class="chip" data-category="Music">Music</div>
+    <div class="chip" data-category="Podcasts">Podcasts</div>
+    <div class="chip" data-category="Web Development">Web Development</div>
+    <div class="chip" data-category="React">React</div>
+    <div class="chip" data-category="JavaScript">JavaScript</div>
+    <div class="chip" data-category="HTML">HTML</div>
+    <div class="chip" data-category="Tailwind CSS">Tailwind CSS</div>
+    <div class="chip" data-category="Machine Learning">Machine Learning</div>
+  </div>
+
+  <!-- ================= VIDEOS ================= -->
+  <div class="videos" id="videos"></div>
+
+  <!-- ================= OFFLINE BANNER ================= -->
+  <div class="offline-banner" id="offlineBanner"></div>
+
+  <script src="src/main.js" type="module"></script>
+</body>
+</html>
