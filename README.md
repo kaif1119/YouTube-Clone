@@ -3,14 +3,12 @@
 ```
 /project
 │
+├── 📄 index.html
+├── 📄 main.js
+├── 🎨 style.css
 ├── 📄 README.md
 │
 └── 📂 src/
-    │
-    ├── 📂 app/
-    │   ├── 📄 index.html
-    │   ├── 📄 main.js
-    │   └── 🎨 style.css
     │
     ├── 📂 components/
     │   └── 📄 renderVideos.js
