@@ -1,10 +1,10 @@
-import { youtubeVideos } from "../data/videos.js";
-import { renderVideos } from "../components/renderVideos.js";
-import { initSearch } from "../features/search.js";
-import { initChips } from "../features/chips.js";
-import { initTheme } from "../features/themeToggle.js";
-import { initOfflineStatus } from "../features/offlineStatus.js";
-import { initMobileSearch } from "../features/mobileSearch.js";
+import { youtubeVideos } from "./src/data/videos.js"
+import { renderVideos } from "./src/components/renderVideos.js";
+import { initSearch } from "./src/features/search.js";
+import { initChips } from "./src/features/chips.js";
+import { initTheme } from "./src/features/themeToggle.js";
+import { initOfflineStatus } from "./src/features/offlineStatus.js";
+import { initMobileSearch } from "./src/features/mobileSearch.js";
 
 // DOM
 const container = document.getElementById("videos");
